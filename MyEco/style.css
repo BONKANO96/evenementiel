@@ -1,0 +1,516 @@
+body{
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+
+.container{
+    padding: 1%;
+    height: 15%;
+}
+
+.logo{
+    margin: 3%;
+}
+
+nav {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    text-align: right;
+    display: inline-block;
+}
+
+nav ul li a{
+    color: #131414;
+    text-decoration: none;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 25px;
+    color:  #131414;
+    background-color: #e5e2dfd1;
+}
+
+/* Style page panier*/
+.cart-container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items, .cart-summary, .order-form {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.item-info h3, .item-info p, .summary-info p {
+    margin: 5px 0;
+}
+
+.remove-btn, .checkout-btn, .submit-btn {
+    background-color: #C68642;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.remove-btn:hover, .checkout-btn:hover, .submit-btn:hover {
+    background-color: #C68642;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+
+/* Style page produits */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: absolute;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    width: calc(33.333% - 20px);
+    cursor: pointer;
+}
+
+.product-card:hover {
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-details {
+    position: relative;
+    padding: 15px;
+    text-align: center;
+}
+
+
+/* Style page acceuil */
+.products_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    padding-top: 15px;
+    margin-left: 3px;
+    gap: 25px;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.product_class {
+    background-color: #ffffff; /* Fond blanc pour chaque produit */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1); /* Ombre portée douce */
+    overflow: hidden; /* Assure que tout reste à l'intérieur des coins arrondis */
+    transition: transform .2s, box-shadow .2s; /* Transition douce pour l'effet au survol */
+    width: auto;
+    margin-bottom: 5px;
+    
+   
+}
+
+.product_class:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2); /* Ombre plus prononcée au survol */
+}
+
+.product_class img {
+    width: 100%; /* Ajuste la largeur de l'image à celle du conteneur */
+    height: auto; /* Garde le ratio de l'image */
+    border-bottom: 1px solid #eee; /* Ligne de séparation */
+}
+
+.product_class h2 {
+    color: #333; /* Couleur plus foncée pour le titre */
+    margin: 5px 0; /* Espacement autour du titre */
+}
+
+.product_class p {
+    color: #666; /* Couleur plus douce pour la description */
+}
+
+.price {
+    color: #333;
+    font-weight: bold;
+    margin: 0.5% 0; /* Espacement autour du prix */
+}
+
+button {
+    background-color: #C68642; /* Couleur de fond du bouton plus moderne */
+    color: white; /* Couleur du texte du bouton */
+    padding: 0.5%; /* Padding autour du texte */
+    border: none; /* Supprime la bordure du bouton */
+    cursor: pointer; /* Change le curseur au survol */
+    width: 100%; /* Ajuste la largeur du bouton à celle du conteneur */
+    border-radius: 0 0 10px 10px; /* Arrondit les coins inférieurs du bouton */
+}
+
+button:hover {
+    background-color: #131414; /* Couleur de fond du bouton au survol */
+}
+
+.stars {
+    display: inline;
+}
+
+.stars span::after {
+    color: #C68642; /* Couleur des étoiles non sélectionnées */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateX(-100%); /* Commence l'animation depuis le haut, en dehors de la vue */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(100%); /* Termine l'animation à sa position normale */
+        opacity: 1;
+    }
+}
+
+#promo-title {
+    display: inline-block; /* Permet l'animation de translation */
+    opacity: 0; /* Rend le titre initialement invisible */
+    transform: translateY(-100%); /* Position de départ hors de la vue */
+    animation-fill-mode: forwards; /* Garde le titre dans sa position finale après l'animation */
+}
+
+
+.promotion-section {
+    background-color: #fff; /* Fond neutre */
+    padding: 40px 20px; /* Espace généreux */
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.promotion-block {
+    width: calc(50% - 10px); /* Ajustement pour le gap */
+    margin: 20px 0;
+}
+
+.card {
+    background-color: #f9f9f9; /* Fond clair pour les cartes */
+    border: 1px solid #ddd; /* Bordure subtile */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 20px; /* Espace intérieur */
+    margin-bottom: 20px; /* Espace entre les cartes */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre douce */
+    transition: all 0.3s ease; /* Transition pour l'interaction */
+    position: relative; /* Pour le positionnement d'éléments internes */
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Ombre accentuée au survol */
+    transform: translateY(-5px); /* Légère élévation */
+}
+
+.card span {
+    display: block; /* Nouvelle ligne */
+    background-color: #131414; /* Couleur d'accent */
+    color: #fff; /* Texte blanc */
+    padding: 5px 10px; /* Petite bordure */
+    border-radius: 20px; /* Bords très arrondis */
+    width: fit-content;
+    margin: 10px auto 0; /* Centré et espacé du texte principal */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.epice_vedettes{
+    padding: 1% 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Nombre de colonnes ajustées automatiquement */
+}
+
+.image {
+    overflow: hidden;
+    width: 75%;
+    height: auto; /* Permet aux images de conserver leurs proportions */
+}
+
+.epice_vedettes div {
+    margin: 5px;
+}
+
+.par{
+    color: white;
+    text-align: center;
+    padding-right: 25%;
+}
+
+.text {
+    text-align: center;
+    color: white;
+    padding-right: 25%;
+}
+
+#bouton_achat {
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    color: #C68642;
+}
+
+
+.special_ramadan {
+    margin-top: -25;
+}
+
+.special_ramadan h2 {
+    color: #C68642;
+    padding-top: 3%;
+    text-align: center;
+}
+
+.special_ramadan h5{
+    padding-top: 3%;
+}
+
+
+footer div{
+    padding-top: 0.1%;
+    margin-top: 0;
+}
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Aligner les icônes horizontalement */
+}
+
+.social-icons li {
+    display: inline-block; /* Afficher les icônes sur une seule ligne */
+    margin: 0 1.5%;
+}
+
+.logo_footer{
+    text-align: center;
+    color: #fff;
+}
+
+#menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.separation {
+    display: none;
+}
+
+.product_reviews h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.logo_footer h5{
+    color: #fff;
+}
+
+.item_panier {
+    display: flex; /* Utilisation de flexbox */
+    flex-direction: row;
+}
+
+.cart_items {
+    display: inline-block;
+}
+
+.cart_item {
+    display: flex; /* Utilisation de flexbox */
+    flex-direction: row;
+}
+
+.cart_item > * {
+    margin-right: 9%; /* Espacement entre les éléments */
+}
+
+.option {
+    color: #C68642;
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 991px) {
+    .logo{
+        text-align: center;
+    }
+
+    .menu {
+        display: grid;
+    }
+
+    .menu.active{
+        display: grid;
+    }
+
+    .menu li {
+        padding-bottom: 25px;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    nav ul li a{
+        color: #131414;
+        text-decoration: none;
+    }
+
+    .products_container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    /* Style page produits */
+    .header_pp {
+        width: 100vw; /* Ajustement de la hauteur de la bannière pour les écrans plus petits */
+    }
+
+    .menu {
+        flex-direction: column; /* Les éléments du menu s'affichent en colonne */
+    }
+
+    .product-card {
+        width: 90%; /* Les cartes de produit prennent plus de place */
+        margin: 10px auto; /* Centrage des cartes */
+    }
+
+    .menu {
+        display: none; /* Cache le menu par défaut sur les petits écrans */
+    }
+
+    .menu.is-active {
+        display: flex; /* Affiche le menu en mode flex lorsque activé */
+        flex-direction: column;
+    }
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .epice_vedettes{
+        padding: 1% 5%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Nombre de colonnes ajustées automatiquement */
+    }
+
+    .special_ramadan div {
+        color: black;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .special_ramadan {
+        margin-top: -9%;
+    }
+    
+    .special_ramadan h5{
+        margin-top: 23px;
+    }
+    
+    .separation {
+        display: block;
+        margin-bottom: 13%;
+    }
+
+    #bouton_achat {
+        padding-top: 1px;
+    }
+}

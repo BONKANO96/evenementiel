@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Accueil E-commerce</title>
+    <link rel="stylesheet" type="text/css" href="C:\Users\bonka\OneDrive\Bureau\MyEco\style.css">
+</head>
+<body style="background-color:#e5e2dfd1;">
+    <header style="background-image: url('image_page_acceuil/banniere-souk.webp'); background-size: cover; background-position: center; color: #131414; padding: 0; height: 491px;">
+        <div class="container" style="background-color: #c68642d1;">
+            <div class="logo"><h1>MyA-o épices</h1></div>
+            <nav>
+                <div id="menu-toggle">&#9776;</div>
+                <ul class="menu">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="produits.html">Produits</a></li>
+                    <li><a href="panier.html">Panier</a></li>
+                    <li><a href="paiement.html">Paiement</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h1 style="color: #131414; text-align: center;">Plongez dans l'univers des saveurs avec notre sélection d'Épices Vedettes : là où chaque pincée transforme l'ordinaire en extraordinaire.<br>🌟🌟🌟🍛🍛🍛</h1>
+            <div class="products_container">
+                <div class="product_class">
+                    <h2>Curcuma</h2>
+                    <img src="image_page_acceuil\curcuma.webp">
+                    <p class="price">9€ Prix</p>
+                    <button>Ajouter au panier</button>
+                </div>
+
+                <div class="product_class">
+                    <h2>Huile d'arachide</h2>
+                    <img src="image_page_acceuil\huile_arachide.webp">
+                    <p class="price">17€ Prix</p>
+                    <button>Ajouter au panier</button>
+                </div>
+
+                <div class="product_class">
+                    <h2>Garam Massala</h2>
+                    <img src="image_page_acceuil\garam_massala.webp">
+                    <p class="price">27€ Prix</p>
+                    <button>Ajouter au panier</button>
+                </div>
+
+                <div class="product_class">
+                    <h2>Safran moulu</h2>
+                    <img src="C:\Users\bonka\OneDrive\Bureau\MyEco\image_page_acceuil\Safran.png">
+                    <p class="price">35€ Prix</p>
+                    <button>Ajouter au panier</button>
+                </div>
+            </div>    
+        </section>
+
+        <section class="promotion-section">
+            <h2 id="promo-title">Nos Offres Exclusives spécial ramadan</h2>
+            <div class="cards-container">
+                <!-- Bloc Fidélisation -->
+                <div class="promotion-block">
+                    <h3>Fidélisez vos papilles</h3>
+                    <div class="card" data-spice="Curcuma">Curcuma <span>-20%</span></div>
+                    <div class="card" data-spice="Paprika fumé">Paprika fumé <span>Achetez 1, obtenez le 2e à -50%</span></div>
+                    <div class="card" data-spice="Cumin noir">Cumin noir <span>Cadeau surprise</span></div>
+                    <div class="card" data-spice="Safran">Safran <span>Livraison offerte</span></div>
+                </div>
+                <!-- Bloc Conquête -->
+                <div class="promotion-block">
+                    <h3>Conquête des saveurs</h3>
+                    <div class="card" data-spice="Ras el Hanout">Ras el Hanout <span>Pack découverte</span></div>
+                    <div class="card" data-spice="Graines de fenugrec">Graines de fenugrec <span>Réduction gros</span></div>
+                    <div class="card" data-spice="Poivre de Sichuan">Poivre de Sichuan <span>Exclusivité web</span></div>
+                    <div class="card" data-spice="Cardamome verte">Cardamome verte <span>Offre bienvenue</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div style="background-color: #C68642;">
+            <ul class="social-icons">
+                <li><a href="#"><img src="image_page_acceuil\gmail.png" width="40"></a></li>
+                <li><a href="#"><img src="image_page_acceuil\facebook.png" width="40"></a></li>
+                <li><a href="#"><img src="image_page_acceuil\instagram.png" width="40"></a></li>
+                <li><a href="#"><img src="image_page_acceuil\twitter.png" width="40"></a></li>
+            </ul>
+            <div class="logo_footer"><h1 style="color: #131414;">MyA-o épices</h1></div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const title = document.getElementById('promo-title');
+            // Applique l'animation avec une durée de 2 secondes
+            title.style.animation = "slideDown 5s ease-out";
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const menu = document.querySelector('.menu');
+
+            menuToggle.addEventListener('click', function() {
+                menu.classList.toggle('is-active'); // Ajoutez une classe "is-active" pour gérer l'affichage
+            });
+        });
+
+    </script>
+</body>
+</html>

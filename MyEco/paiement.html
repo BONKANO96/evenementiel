@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits</title>
+    <link rel="stylesheet" type="text/css" href="C:\Users\bonka\OneDrive\Bureau\MyEco\style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container" style="background-color: #c68642d1;">
+            <div class="logo"><h1>MyA-o épices</h1></div>
+            <nav>
+                <div id="menu-toggle">&#9776;</div>
+                <ul class="menu">
+                    <li><a href="acceuil.html">Accueil</a></li>
+                    <li><a href="produits.html">Produits</a></li>
+                    <li><a href="panier.html">Panier</a></li>
+                    <li><a href="#">Paiement</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="payment-container">
+        <section class="payment-form">
+            <h2>Informations de Paiement</h2>
+            <form>
+                <div class="form-group">
+                    <label for="cardName">Nom sur la carte :</label>
+                    <input type="text" id="cardName" name="cardName" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardNumber">Numéro de la carte :</label>
+                    <input type="text" id="cardNumber" name="cardNumber" pattern="\d*" maxlength="16" required>
+                </div>
+                <div class="form-group half">
+                    <label for="cardExpiry">Date d'expiration :</label>
+                    <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/AA" required>
+                </div>
+                <div class="form-group half">
+                    <label for="cardCVC">CVC :</label>
+                    <input type="text" id="cardCVC" name="cardCVC" pattern="\d*" maxlength="3" required>
+                </div>
+                <button type="submit" class="submit-btn">Payer</button>
+            </form>
+        </section>
+
+        <section class="order-summary">
+            <h2>Résumé de la commande</h2>
+            <p>Pate d'arachide: 31€</p>
+            <p>Moringa: 15€</p>
+            <p>Frais de livraison: 5€</p>
+            <p>Total: 51€</p>
+        </section>
+    </main>
+
+    <footer>
+        <div style="background-color: #C68642;">
+            <ul class="social-icons">
+                <li><a href="#"><img src="image_page_acceuil\gmail.png" width="40"></a></li>
+                <li><a href="#"><img src="image_page_acceuil\facebook.png" width="40"></a></li>
+                <li><a href="#"><img src="image_page_acceuil\instagram.png" width="40"></a></li>
+                <li><a href="#"><img src="image_page_acceuil\twitter.png" width="40"></a></li>
+            </ul>
+            <div class="logo_footer"><a href="C:\Users\bonka\OneDrive\Bureau\MyEco\acceuil.html" style="text-decoration: none;"><h5 style="color: #131414;">Retour à l'Accueil</h5></a></div>
+        </div>
+    </footer>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const menu = document.querySelector('.menu');
+
+            menuToggle.addEventListener('click', function() {
+                menu.classList.toggle('is-active'); // Ajoutez une classe "is-active" pour gérer l'affichage
+            });
+        });
+
+    </script>
+        
+</body>
+</html>

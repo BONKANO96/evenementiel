@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits</title>
+    <link rel="stylesheet" type="text/css" href="css_site2.css">
+</head>
+<body>
+    <main class="payment-container">
+        <section class="payment-form">
+            <h2>Informations de Paiement</h2>
+            <form>
+                <div class="form-group">
+                    <label for="cardName">Nom sur la carte :</label>
+                    <input type="text" id="cardName" name="cardName" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardNumber">Numéro de la carte :</label>
+                    <input type="text" id="cardNumber" name="cardNumber" pattern="\d*" maxlength="16" required>
+                </div>
+                <div class="form-group half">
+                    <label for="cardExpiry">Date d'expiration :</label>
+                    <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/AA" required>
+                </div>
+                <div class="form-group half">
+                    <label for="cardCVC">CVC :</label>
+                    <input type="text" id="cardCVC" name="cardCVC" pattern="\d*" maxlength="3" required>
+                </div>
+                <button type="submit" class="submit-btn">Payer</button>
+            </form>
+        </section>
+
+        <section class="order-summary">
+            <h2>Résumé de la commande</h2>
+            <p>Produit A: 20€</p>
+            <p>Produit B: 15€</p>
+            <p>Frais de livraison: 5€</p>
+            <p>Total: 40€</p>
+        </section>
+    </main>
+        
+</body>
+</html>
